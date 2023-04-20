@@ -1,0 +1,36 @@
+.container{
+  display: block;
+  margin:15rem 15rem 15rem 38rem;
+  border: 1px solid black;
+  padding: 15px;
+  max-width: 12rem;
+  border-radius: 10px;
+}
+.result{
+  border-bottom: 1px solid #000;
+  display: flex;
+}
+#result{
+  width: 90%;
+  height: 50%;
+  padding-bottom: 5px;
+  margin-bottom: 4px;
+}
+.clipboard{
+  margin-top: 4px;
+}
+.field{
+  margin-top: 7px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+#length{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.btn{
+  margin: 1rem 0rem 0rem 1.9rem;
+  position: inherit;
+
+}
