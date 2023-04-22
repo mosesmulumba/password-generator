@@ -57,6 +57,9 @@ function App() {
   //the text field has to have an  id 
   // then naviigate through the text picked by the textField
   const copyToClipboard = () =>{
+    if(!result){
+      alert("Please first generate password and then you can copy");
+    }else{
     const textField = document.getElementById("result");
     textField.select();
     navigator.clipboard.writeText(textField.value)
@@ -72,6 +75,7 @@ function App() {
       alert("Failed to copy password !", error);
     });
     setResult("");
+  }
   }
 
   
