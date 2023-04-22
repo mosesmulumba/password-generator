@@ -52,6 +52,29 @@ function App() {
     }
 
   };
+
+  //create a function that will help copy the result in the textfield 
+  //the text field has to have an  id 
+  // then naviigate through the text picked by the textField
+  const copyToClipboard = () =>{
+    const textField = document.getElementById("result");
+    textField.select();
+    navigator.clipboard.writeText(textField.value)
+    //it returns a promise which is supposed to fulfilled
+    //then () when it is successful
+    .then(() => {
+      // console.log('Text copied to clipboard');
+      alert("password is copied you can paste");
+    })
+    //when the promise fails
+    .catch((error) => {
+      // console.error('Error copying text: ', error);
+      alert("Failed to copy password !", error);
+    });
+    setResult("");
+  }
+
+  
  
   return (
     <section>
@@ -60,7 +83,7 @@ function App() {
           <div className='result'>
             <input type="text" id="result" name="result" placeholder="Min 6 Char" readOnly value={result} />
             <div className="clipboard">
-              <FaClipboard />
+              <FaClipboard onClick={copyToClipboard} />
             </div>
           </div>
           <div className="field">
