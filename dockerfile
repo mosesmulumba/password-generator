@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-EXPOSE 3000
+EXPOSE 5173
 
 RUN npm install -g create-vite@latest && npm install
 
