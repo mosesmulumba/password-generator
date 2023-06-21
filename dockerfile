@@ -2,7 +2,7 @@ FROM node:18-apine
 
 WORKDIR /app
 
-COPY package.json
+COPY package.json .
 
 # EXPOSE 5173
 
