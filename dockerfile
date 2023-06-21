@@ -1,11 +1,11 @@
-FROM node:20
+FROM node:18-apine
 
 WORKDIR /app
 
-COPY . /app
+COPY package.json
 
-EXPOSE 5173
+# EXPOSE 5173
 
-RUN npm install -g create-vite@latest && npm install
+RUN npm i
 
 CMD ["npm","run","dev"]
